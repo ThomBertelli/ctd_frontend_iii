@@ -1,6 +1,6 @@
 import './style.scss'
 
-export function SegundaAula() {
+export function Lesson02() {
     return (
         <main>
             <h1>Segunda Aula</h1>
