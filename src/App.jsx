@@ -1,4 +1,4 @@
-import { QuintaAula } from "./lessons/Lesson05"
+import { Lesson05 } from "./lessons/Lesson05"
 
 
 
@@ -6,7 +6,7 @@ import { QuintaAula } from "./lessons/Lesson05"
 function App() {
 
   return (
-    <QuintaAula/>
+    <Lesson05/>
   )
 
 }

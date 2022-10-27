@@ -1,4 +1,4 @@
-export function QuintaAulaComponent (props){
+export function Lesson05Component (props){
 
         return(
 

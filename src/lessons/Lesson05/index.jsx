@@ -2,9 +2,9 @@ import './style.scss'
 import reactLogo from './../../assets/images/gifReact.gif'
 import jsLogo from './../../assets/images/js.gif'
 import cssGif from './../../assets/images/css.gif'
-import { QuintaAulaComponent } from '../../assets/components/Lesson5Components'
+import { Lesson05Component } from '../../assets/components/Lesson05Components'
 
-export function QuintaAula() {
+export function Lesson05() {
 
     const componentsFinded = [
         {
@@ -38,7 +38,7 @@ export function QuintaAula() {
                     componentsFinded.map(
                         component => {
                             return (
-                                <QuintaAulaComponent key={component.id} item={component}/>
+                                <Lesson05Component key={component.id} item={component}/>
                             )
                         }
                     )
