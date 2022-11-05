@@ -7,16 +7,8 @@ export function Lesson08() {
     const [nomeCompleto, setNomeCompleto] = useState('')
     const [idade, setIdade] = useState('')
     const [pokemonPredileto, setPokemonPredileto] = useState('')
-
+    const [formularioErro, setFormularioErro] = useState(false)
     const [listaCadastros, setListaCadastros] = useState([
-            // {
-            //     nome: 'Carlos',
-            //     idade: '55',
-            //     pokemon:'Pikachu'
-
-
-            // }
-        
     ])
 
 
@@ -29,28 +21,40 @@ export function Lesson08() {
         const novoCadastro = {
 
             nome: nomeCompleto,
-            idade:idade,
-            pokemon:pokemonPredileto
+            idade: idade,
+            pokemon: pokemonPredileto
 
         }
 
-        setListaCadastros([...listaCadastros, novoCadastro])
+        if (nomeCompleto === '' || idade === '' || pokemonPredileto === '') {
 
+            setFormularioErro(true)
+
+        } else {
+
+            setFormularioErro(false)
+
+            setListaCadastros([...listaCadastros, novoCadastro])
+
+            setNomeCompleto('')
+            setIdade('')
+            setPokemonPredileto('')
+
+        }
     }
 
-
     return (
-        <div className="lesson08">
+        <div className="lesson08 }">
 
-            <form onSubmit={event=> cadastrar(event)}>
+            <form className={formularioErro ? 'form-error' : ''} onSubmit={event => cadastrar(event)}>
                 <label htmlFor="fullName">Nome Completo</label>
-                <input type="text" id="fullName" onChange={event => setNomeCompleto(event.target.value)} />
+                <input type="text" id="fullName" value={nomeCompleto} onChange={event => setNomeCompleto(event.target.value)} />
 
                 <label htmlFor="age"> Idade</label>
-                <input type="text" id="age" onChange={event => setIdade(event.target.value)}  />
+                <input type="text" id="age" value={idade} onChange={event => setIdade(event.target.value)} />
 
                 <label htmlFor="age"> Pokemon Favorito</label>
-                <input type="text" id="age" onChange={event => setPokemonPredileto(event.target.value)}  />
+                <input type="text" id="age" value={pokemonPredileto} onChange={event => setPokemonPredileto(event.target.value)} />
 
                 <button type="submit"> Registrar</button>
             </form>
@@ -58,13 +62,13 @@ export function Lesson08() {
             <section>
 
                 {
-                  listaCadastros.map(
-                    cadastros => {
-                        return(
-                            <Lesson08Card dadosCadastro = {cadastros} />
-                        )
-                    }
-                  )  
+                    listaCadastros.map(
+                        cadastros => {
+                            return (
+                                <Lesson08Card dadosCadastro={cadastros} />
+                            )
+                        }
+                    )
                 }
 
 
@@ -73,8 +77,8 @@ export function Lesson08() {
 
 
         </div>
-   
-        
+
+
 
     )
 }
