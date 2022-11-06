@@ -218,7 +218,8 @@ export function DHGames(){
 
             </main>
             <footer>
-
+                <h3>Game Store todos direitos reservados</h3>
+                <h4>Desenvolvido por: Thomas Breno Bertelli Mendes</h4>
             </footer>
         </div>
         
