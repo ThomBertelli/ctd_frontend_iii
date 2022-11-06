@@ -132,12 +132,15 @@ export function DHGames(){
             </header>
             <main>
                 <div className="banner">
-                    <div className="banner-lettering">
-                        <img src="logo-banner" alt="" />
-                        <h2>PROMOS OU</h2>
+                <img src="/src/assets/images/banner.png" alt="" />
+                    <div className="lettering">
+                    <img className="bumpkin" src="/src/assets/images/bumpkin.png"alt="" />                        
+                        <img className="bat" src="/src/assets/images/bat.png" alt="" />
+                        
+                        <h2 >PROMOS OU</h2>
                         <h3>DESCONTOZURAS?</h3>
-                        <p>O trocadilho é ruim mas as promoções não!</p>
-                        <p>Aproveite as assombrosas ofertas de Halloween.</p>
+                        <h4>O trocadilho é ruim mas as promoções não!</h4>
+                        <h5>Aproveite as assombrosas ofertas de Halloween.</h5>
 
                     </div>
                 </div>

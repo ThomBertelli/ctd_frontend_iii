@@ -8,7 +8,8 @@ import { DHGames } from "./pages/DHGames"
 function App() {
 
   return (
-      <Lesson08/>
+      <DHGames/>
+      // <Lesson08/>
   )
 
 }
