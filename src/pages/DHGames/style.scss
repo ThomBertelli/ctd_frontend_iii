@@ -5,6 +5,10 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     overflow: hidden;
+
+    main{
+        background-color: black;
+    }
     
 
     header{
@@ -15,7 +19,7 @@
         align-items: center;
         justify-content: center;
         padding: 2em;
-        background-color: black; 
+        background-color: rgb(24, 23, 23); 
         z-index: 50;   
         
         h1{
@@ -59,76 +63,274 @@
         border-radius: 50%;
 
     }
-}
 
-.banner{
-    width: 100%;
-    height: 1000px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
 
-    img{
+
+
+    .banner{
         width: 100%;
-        height: 45rem;
-        z-index: -1;
+        height: 850px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
 
+            img{
+                width: 100%;
+                height: 45rem;
+                z-index: 1;
+
+            }
+
+            .lettering{
+                display: block;
+                position: absolute;
+                text-align: center;
+                background-color: rgba(2, 2, 2, 0.445);
+                padding: 5rem;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                z-index: 2;
+                border-radius: 1rem;
+                
+                h2{
+                    font-weight: 900;
+                    font-size: 80px;
+                    line-height: 75px;
+                }
+                
+                h3{
+                    font-weight: 900;
+                    font-size: 46px;
+                    line-height: 36px;
+                    color: #FF7A00;
+                    margin-bottom: 5rem;
+
+                }
+                h4{
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 36px;
+                }
+
+                h5{
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 26px;
+
+                }
+                
+
+
+            }
+            .bumpkin{
+                width: 15rem;
+                height: 15rem;
+                position: absolute;
+                z-index: 12;
+                right: 32rem;
+                top: 16rem;
+            }
+            .bat{
+                width: 15rem;
+                height: 15rem;
+                position: absolute;
+                z-index: 12;
+                left: 30rem;
+                bottom: 18rem;
+            }
     }
 
-    .lettering{
-        display: block;
-        position: absolute;
-        text-align: center;
-        background-color: rgba(2, 2, 2, 0.445);
-        padding: 5rem;
-        font-family: 'Poppins', sans-serif;
-        font-style: normal;
-        border-radius: 1rem;
+    .games{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         
-        h2{
-            font-weight: 900;
-            font-size: 80px;
-            line-height: 75px;
-        }
-        
-        h3{
-            font-weight: 900;
-            font-size: 46px;
-            line-height: 36px;
-            color: #FF7A00;
-            margin-bottom: 5rem;
-
-        }
-        h4{
+    
+        .titles-list{
+            
+            font-family: 'Poppins';
+            font-style: normal;
             font-weight: 500;
-            font-size: 22px;
-            line-height: 36px;
+            font-size: 36px;
+            line-height: 54px;
+            padding: 1rem;
+                 
         }
 
-        h5{
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 26px;
-
-        }
+        .titles-card{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 54px;
+            padding: 1rem;
         
+        }
 
 
+        .list-conteiner{
+            display: flex;
+            flex-direction: column;            
+            width: 100%;
+            gap:2rem;
+            margin-bottom: 5rem;
+            
+
+            .list{
+                display: flex;
+                background-color: rgb(24, 23, 23);
+                padding: .5rem 1rem;
+                align-items: center;
+                width: 70rem;
+                
+
+                h2{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 36px;
+                }
+                
+                h4{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 48px;
+                    color: rgba(255, 122, 0, 0.8);
+                    text-align: right;
+
+                }   
+
+
+
+                p{
+                    text-transform: capitalize;
+
+                }
+            
+            }
+
+            .list-image{
+                img{
+                    width: 15rem;
+                    height: 9rem;
+                }          
+            }
+
+            .list-text{
+                width: 100%;
+                margin-left: .5rem;
+
+            }
+                        
+            .catefories{
+                color: rgba(255, 255, 255, 0.37);
+            }
+
+
+            .list:hover{
+                cursor: pointer;
+                transform: scale(1.05);
+                
+
+
+            }
+
+
+        }
+
+
+
+        .card-container{
+            display: flex;
+            flex-wrap:wrap;
+            width: 100%;
+            gap:2rem;
+            justify-content: center;
+            
+            
+
+            .card-game{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                background-color: rgb(24, 23, 23);
+                width: 34rem;
+                height: 25rem;
+                justify-content: space-between;
+                border-radius: 1rem;                
+                
+            
+
+            .card-image{
+
+                img{
+                    width: 33.8rem;
+                    border-radius: 1rem
+
+                }
+
+            }
+            .card-text{
+                padding-left: 2rem;
+                
+
+                h2{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    
+                }
+
+                h3{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.37);
+
+                }                
+                
+            }
+
+            .card-price{
+                padding-right: 2rem; 
+                text-align: center;            
+                
+                h5{
+                    text-decoration: line-through;
+                    color: rgba(255, 255, 255, 0.37);
+
+                }
+
+                h2{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 600;
+                    color: rgba(255, 122, 0, 0.8);
+                }
+
+            }
+            
+        }
+
+        }
+
+        .card-game:hover{
+            cursor: pointer;              
+            border: solid 2px white;
+            
+        }  
+
+
+        
     }
-    .bumpkin{
-        width: 15rem;
-        height: 15rem;
-        position: absolute;
-        z-index: 12;
-        right: 32rem;
-        top: 16rem;
-    }
-    .bat{
-        width: 15rem;
-        height: 15rem;
-        position: absolute;
-        z-index: 12;
-        left: 30rem;
-        bottom: 18rem;
-    }
+
+
+
+
+    
+
 }

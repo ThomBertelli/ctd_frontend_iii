@@ -145,10 +145,11 @@ export function DHGames(){
                     </div>
                 </div>
 
-
+            <div className="games">
                 <div className="new-games">
-                    <h4>New Games</h4>
-                    <ul className="list-item-finded">
+                    <h4 className="titles-list">New Games</h4>
+                    <div className="list-conteiner">
+                    
 
                     {
                     newGames.map(
@@ -159,13 +160,15 @@ export function DHGames(){
                         }
                     )
                 }
-                    </ul>
+            
+                    </div>
                 </div>
+                
 
 
                 <div className="hallowenen-offers">
-                    <h4>Halloween offers</h4>
-                    <ul className="offers-items-finded">
+                    <h4 className="titles-card">Halloween offers</h4>
+                    <div className="card-container">
 
                     {
                     halloweenGames.map(
@@ -176,12 +179,12 @@ export function DHGames(){
                         }
                     )
                 }
-                    </ul>
+                    </div>
                 </div>
 
                 <div className="early-access-games">
-                    <h4>Early Access Games</h4>
-                    <ul className="list-item-finded">
+                    <h4 className="titles-list">Early Access Games</h4>
+                    <div className="list-conteiner">
 
                     {
                     earlyAccessGames.map(
@@ -192,12 +195,12 @@ export function DHGames(){
                         }
                     )
                 }
-                    </ul>
+                    </div>
                 </div>
 
                 <div className="cheap-games">
-                    <h4>Cheap Games</h4>
-                    <ul className="offers-items-finded">
+                    <h4 className="titles-card">Cheap Games</h4>
+                    <div className="card-container">
 
                     {
                     cheapGames.map(
@@ -208,9 +211,9 @@ export function DHGames(){
                         }
                     )
                 }
-                    </ul>
+                    </div>
                 </div>
-
+            </div>
 
 
             </main>
