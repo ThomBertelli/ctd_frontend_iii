@@ -44,7 +44,7 @@ export function Lesson15() {
 
     function deleteLocation(currentLocation) {
 
-        let newLocations = locations.filter((i) => i.ibge !== currentLocation.ibge)   
+        let newLocations = locations.filter((i) => i.cep !== currentLocation.cep)   
         setLocations(newLocations)
    
     }  
