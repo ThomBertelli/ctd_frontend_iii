@@ -9,6 +9,7 @@ export function Lesson15() {
 
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
+    const [inputError, setInputError] = useState(false)
 
     function searchCep(event) {
 
@@ -23,12 +24,13 @@ export function Lesson15() {
 
                             if(address.erro !== undefined) {
 
-                                // Deu erro
+                                setInputError(true)
 
                             } else {
 
                                 // Deu Sucesso
                                 setLocations([...locations, address])
+                                setInputError(false)
                                 setCep('')
 
                             }
@@ -45,7 +47,7 @@ export function Lesson15() {
 
     function deleteLocation(currentLocation) {
 
-        let newLocations = locations.filter((i) => i.cep !== currentLocation.cep)   
+        let newLocations = locations.filter((location) => location.cep !== currentLocation.cep)   
         setLocations(newLocations)
    
     }  
@@ -54,17 +56,19 @@ export function Lesson15() {
 
         <div className="decima-quarta-aula-component">
 
-            <form onSubmit={event => searchCep(event)}>
+            <form className={inputError? 'input-error': null} onSubmit={event => searchCep(event)}>
 
                 <h1>Cadastrar endereços</h1>
 
                 <div>
                     <label>Cep</label>
                     <MaskedInput
+                        className="masked-input"
                         type="text"
                         value={cep}
                         onChange={event => setCep(event.target.value)}
                     />
+                    <small>Por favor, insira um CEP válido.</small>
                 </div>
 
                 <button type='submit'>Cadastrar</button>
