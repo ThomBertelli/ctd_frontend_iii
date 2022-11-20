@@ -10,13 +10,13 @@ export function Lesson15() {
     const [locations, setLocations] = useState([])
     const [cep, setCep] = useState('')
 
-    function searchCep(cepRecieved) {
+    function searchCep(event) {
 
-        setCep(cepRecieved)
+        event.preventDefault()
 
-        if(cepRecieved.length === 8) {
+        if(cep.length === 8) {
 
-            fetch(`https://viacep.com.br/ws/${cepRecieved}/json/`).then(
+            fetch(`https://viacep.com.br/ws/${cep}/json/`).then(
                 response => {
                     response.json().then(
                         address => {
@@ -44,15 +44,16 @@ export function Lesson15() {
 
     function deleteLocation(currentLocation) {
 
-        console.log(currentLocation)
-
-    }
+        let newLocations = locations.filter((i) => i.ibge !== currentLocation.ibge)   
+        setLocations(newLocations)
+   
+    }  
 
     return(
 
         <div className="decima-quarta-aula-component">
 
-            <form>
+            <form onSubmit={event => searchCep(event)}>
 
                 <h1>Cadastrar endereços</h1>
 
@@ -61,17 +62,18 @@ export function Lesson15() {
                     <input
                         type="number"
                         value={cep}
-                        onChange={event => searchCep(event.target.value)}
+                        onChange={event => setCep(event.target.value)}
                     />
                 </div>
 
-                <button>Cadastrar</button>
+                <button type='submit'>Cadastrar</button>
 
             </form>
 
             <section className="locations">
 
-                {
+                { 
+                    
                     locations.map(
                         (location, index) => (
                             <Lesson15Component
@@ -81,6 +83,7 @@ export function Lesson15() {
                             />
                         )
                     )
+                    
                 }
 
             </section>
