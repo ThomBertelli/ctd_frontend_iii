@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
 
-import { Lesson15Component } from '../../assets/components/Lesson15Components'
+import { Lesson15Component, MaskedInput } from '../../assets/components/Lesson15Components'
 
 import './style.scss'
 
@@ -29,6 +29,7 @@ export function Lesson15() {
 
                                 // Deu Sucesso
                                 setLocations([...locations, address])
+                                setCep('')
 
                             }
                         }
@@ -59,8 +60,8 @@ export function Lesson15() {
 
                 <div>
                     <label>Cep</label>
-                    <input
-                        type="number"
+                    <MaskedInput
+                        type="text"
                         value={cep}
                         onChange={event => setCep(event.target.value)}
                     />
