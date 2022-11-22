@@ -11,7 +11,7 @@ export function Lesson03(){
 
     return(
 
-        <main>
+        <main className='lesson03-main'>
             <div>
                 <h1>Lista de componentes:</h1>
                 <img src={gifReact}/>                

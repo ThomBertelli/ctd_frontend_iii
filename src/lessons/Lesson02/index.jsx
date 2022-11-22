@@ -2,7 +2,7 @@ import './style.scss'
 
 export function Lesson02() {
     return (
-        <main>
+        <main className='lesson02-main'>
             <h1>Segunda Aula</h1>
             <h2>Projeto escolhido: Instagram</h2>
             <ul>

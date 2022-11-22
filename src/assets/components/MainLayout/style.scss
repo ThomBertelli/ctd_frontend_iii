@@ -1,0 +1,61 @@
+.main-container {
+    height: 100%;
+
+    .main-layout--header {
+        position: relative;
+        height: 60px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        h1{
+            color: black;
+        }
+    }
+
+    .main-layout--main {
+        display: flex;
+        height: 100%;
+
+        .main-layout--menu {
+            background-color: rgb(20, 20, 20);
+            max-width: 130px;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+
+            a {
+                text-decoration: none;
+
+
+            }
+
+            li {
+                list-style: none;
+                margin-top: 5px;
+                padding: 5px 10px;
+            }
+
+            li:hover {
+                cursor: pointer;
+                background-color: rgb(104, 102, 102);
+
+            }
+            h3{
+                margin-left: 12px;
+            }
+
+        }
+
+        .main-content {
+            display: flex;
+            flex: 5;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+
+    }
+
+}
