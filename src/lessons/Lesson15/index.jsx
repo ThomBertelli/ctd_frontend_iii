@@ -22,7 +22,7 @@ export function Lesson15() {
                     response.json().then(
                         address => {
 
-                            if(address.erro !== undefined) {
+                            if(address.erro !== undefined ) {
 
                                 setInputError(true)
 
@@ -39,6 +39,8 @@ export function Lesson15() {
                 }
             )
 
+        }else{
+            setInputError(true)
         }
 
     }
