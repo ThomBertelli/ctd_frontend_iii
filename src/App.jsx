@@ -1,5 +1,6 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
+
 import { MainLayout } from './components/MainLayout'
 import { Lesson02 } from './lessons/Lesson02'
 import { Lesson03 } from './lessons/Lesson03'
@@ -7,6 +8,7 @@ import { Lesson05 } from "./lessons/Lesson05"
 import { Lesson08 } from "./lessons/Lesson08"
 import { Lesson13 } from "./lessons/Lesson13"
 import { Lesson15 } from "./lessons/Lesson15"
+import { Blog } from './pages/Blog'
 import { DHGames } from "./pages/DHGames"
 import { Login } from "./pages/Login"
 
@@ -54,6 +56,11 @@ function App() {
         },
       ]
       
+    },
+    {
+      path:'blog',
+      element: <Blog/>,
+      children:[]
     }
 
 
