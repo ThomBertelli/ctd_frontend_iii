@@ -2,7 +2,7 @@ import './style.scss'
 import reactLogo from './../../assets/images/gifReact.gif'
 import jsLogo from './../../assets/images/js.gif'
 import cssGif from './../../assets/images/css.gif'
-import { Lesson05Component } from '../../assets/components/Lesson05Components'
+import { Lesson05Component } from '../../components/Lesson05Components'
 
 export function Lesson05() {
 

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
 
-import { Lesson15Component, MaskedInput } from '../../assets/components/Lesson15Components'
+import { Lesson15Component, MaskedInput } from '../../components/Lesson15Components'
 
 import './style.scss'
 

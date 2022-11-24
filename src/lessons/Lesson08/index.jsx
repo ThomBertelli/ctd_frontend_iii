@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Lesson08Card } from '../../assets/components/Lesson08Components'
+import { Lesson08Card } from '../../components/Lesson08Components'
 import './style.scss'
 
 export function Lesson08() {

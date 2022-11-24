@@ -1,5 +1,5 @@
-import { DHGamesListComponents } from "../../assets/components/DHGamesComponents"
-import { DHGamesCardComponents } from "../../assets/components/DHGamesComponents"
+import { DHGamesListComponents } from "../../components/DHGamesComponents"
+import { DHGamesCardComponents } from "../../components/DHGamesComponents"
 import './style.scss'
 
 export function DHGames(){
