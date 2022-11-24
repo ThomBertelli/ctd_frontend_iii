@@ -1,0 +1,33 @@
+.card-container{
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 700px;
+    padding: 25px;
+
+        small{
+            text-align: right;
+            color:coral;
+
+        }
+        h3{
+            font-size: 30px;
+            text-transform: capitalize;
+            
+
+        }
+        .emojis{
+            text-align: end;
+
+        }
+
+
+
+
+
+
+
+
+}

@@ -2,27 +2,29 @@ import { useState } from 'react'
 import { BlogCard } from '../../components/BlogCards'
 import { BlogLayout } from '../../components/BlogLayout'
 
-const Blog = () =>{
+import "./style.scss"
 
-    const[posts, setPosts] = useState([])
+const Blog = () => {
+
+    const [posts, setPosts] = useState([])
 
     function getPosts() {
-        
 
-            fetch(`https://jsonplaceholder.typicode.com/posts?userId=1`).then(
-                response => {
-                    response.json().then(
-                        post => {
 
-                                if(posts.length < 10){
-                                    setPosts(post)
-                                }                        
+        fetch(`https://jsonplaceholder.typicode.com/posts?userId=1`).then(
+            response => {
+                response.json().then(
+                    post => {
 
-                            }
-                        
-                    )
-                }
-            )
+                        if (posts.length < 10) {
+                            setPosts(post)
+                        }
+
+                    }
+
+                )
+            }
+        )
 
 
     }
@@ -31,24 +33,37 @@ const Blog = () =>{
     getPosts()
 
 
-    return(
+    return (
         <div >
-            <BlogLayout/>
+            <BlogLayout />
 
-            { 
-                    
-                    posts.map(
-                        (posts, index) => (
-                            <BlogCard
-                                key={index}
-                                data={posts}
-                                
+            <div className='content-container'>
 
-                            />
+                <div className='cards'>
+
+                    {
+
+                        posts.map(
+                            (posts, index) => (
+                                <BlogCard
+                                    key={index}
+                                    data={posts}
+
+
+                                />
+                            )
                         )
-                    )
-                    
-                }
+
+                    }
+
+                </div>
+
+
+
+
+
+            </div>
+
 
 
 
@@ -67,4 +82,4 @@ const Blog = () =>{
 
 }
 
-export {Blog}
+export { Blog }

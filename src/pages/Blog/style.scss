@@ -1,0 +1,22 @@
+.content-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    justify-content: center;
+
+    
+
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+
+
+
+
+
+}
