@@ -2,15 +2,16 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    margin-top: 25px;
+    padding-top: 25px;
     justify-content: center;
+    background-color:white;
 
     
 
 
     .cards {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 25px;
     }
 
