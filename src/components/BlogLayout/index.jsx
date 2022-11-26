@@ -13,16 +13,20 @@ const BlogLayout = () => {
 
             <nav className="blog-layout-nav">
                 <ul>
-                    <li>HOME</li>
-                    <li>ABOUT</li>
-                    <li>CONTACT</li>
+                    <Link to=''><li>HOME</li></Link>
+                    <Link><li>ABOUT</li></Link>
+                    <Link><li>CONTACT</li></Link>
                 </ul>
             </nav>
 
-            <div className='main-content'>
+            <div className='main-content' >
                 <Outlet />
                 
             </div>
+
+            <footer>
+                
+            </footer>
 
 
         </div>

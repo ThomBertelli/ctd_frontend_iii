@@ -4,17 +4,17 @@
     display: flex;
     flex-direction: column;
     background-color: #506CBA;
-    height: 750px;
+    height: 500px;
     padding: 25px;
     color: white;
+    text-decoration: none;
 
-
-
+    
 
     .card-icons {
-        
-       text-align: center;
-       letter-spacing: 15px;
+
+        text-align: center;
+        letter-spacing: 15px;
 
     }
 
@@ -38,12 +38,16 @@
         }
     }
 
+
 }
 
 .card-container:hover {
     cursor: pointer;
-
+    
 
 
 
 }
+
+
+   

@@ -1,38 +1,32 @@
-import { useEffect, useState } from 'react'
-import { BlogCard } from '../../components/BlogCards'
-import { BlogLayout } from '../../components/BlogLayout'
 
-import "./style.scss"
+import { useState, useEffect } from 'react'
+import { BlogCard } from '../../../components/BlogCards'
+import './style.scss'
 
-const Blog = () => {
-
-    const [posts, setPosts] = useState([{}
-        
+const Home = () => {
 
 
+    const [posts, setPosts] = useState([])
 
 
-    ])
-
-    
 
     function getPosts() {
 
 
 
 
-       fetch(`https://jsonplaceholder.typicode.com/posts?userId=1`)
-        .then((response) => response.json())
-        .then((postArray) =>setPosts(postArray))                 
-        
+        fetch(`https://jsonplaceholder.typicode.com/posts?userId=1`)
+            .then((response) => response.json())
+            .then((postArray) => setPosts(postArray))
+
     }
 
 
 
-   useEffect(()=>{
+    useEffect(() => {
 
-    getPosts()
-   },[])
+        getPosts()
+    }, [])
 
 
 
@@ -40,8 +34,6 @@ const Blog = () => {
 
     return (
         <div >
-            <BlogLayout />
-
             <div className='content-container'>
 
                 <div className='cards'>
@@ -62,29 +54,12 @@ const Blog = () => {
                     }
 
                 </div>
-
-
-
-
-
             </div>
-
-
-
-
-
-
         </div>
-
-
-
-
-
     )
 
 
 
 }
 
-
-export { Blog }
+export { Home }
