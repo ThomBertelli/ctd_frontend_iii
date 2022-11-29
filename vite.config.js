@@ -8,6 +8,16 @@ export default defineConfig({
     watch: {
       usePolling: true
     }
+  },
+  test: {
+    globals: true,
+    environment: "jsdom"
+  },
+  css: {
+    modules: {
+      localsConvention: 'camelCase',
+      generateScopedName: '[local]_[hash:base64:2]'
+    }
   }
 
 })

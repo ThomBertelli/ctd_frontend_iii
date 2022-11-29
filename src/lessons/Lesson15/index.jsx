@@ -63,8 +63,8 @@ export function Lesson15() {
                 <h1>Cadastrar endereços</h1>
 
                 <div>
-                    <label>Cep</label>
-                    <MaskedInput
+                    <label for="cep" >Cep</label>
+                    <MaskedInput                        
                         className="masked-input"
                         type="text"
                         value={cep}
@@ -73,7 +73,7 @@ export function Lesson15() {
                     <small>Por favor, insira um CEP válido.</small>
                 </div>
 
-                <button type='submit'>Cadastrar</button>
+                <button type='submit' aria-label="submit-button">Cadastrar</button>
 
             </form>
 

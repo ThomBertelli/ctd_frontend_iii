@@ -8,8 +8,9 @@
     padding: 25px;
     color: white;
     text-decoration: none;
-
-    
+    transform: scale(1);
+    transition:  ease 1s;
+        
 
     .card-icons {
 
@@ -43,9 +44,8 @@
 
 .card-container:hover {
     cursor: pointer;
-    
-
-
+    transform: scale(0.95);
+    transition:  ease 1s;  
 
 }
 

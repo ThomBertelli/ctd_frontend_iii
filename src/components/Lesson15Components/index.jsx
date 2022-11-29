@@ -34,6 +34,7 @@ export function MaskedInput({value, onChange}){
 
     return (
     <InputMask 
+        id="cep"
         mask="99999-999"
         value={value}
         onChange={handleChange}/>
