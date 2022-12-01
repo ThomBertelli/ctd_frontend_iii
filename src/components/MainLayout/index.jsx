@@ -1,11 +1,14 @@
 import { Link, Outlet } from 'react-router-dom'
+import { useTheme } from '../../hooks/useTheme'
 import './style.scss'
 
 export const MainLayout = () => {
 
+    const { theme } = useTheme()
+
 
     return (
-        <div className='main-container'>
+        <div className={`main-container ${theme}`}>
 
             <header className='main-layout--header'>
 
@@ -31,8 +34,10 @@ export const MainLayout = () => {
                         <li><Link to="/lesson15">📖 Lesson 15</Link></li>
                         <li><Link to="/dhgames">🎮 DH games</Link></li>
                         <li><Link to="/login">🖥️ Login</Link></li>
-
+                        <h3>⚙️Opções</h3>
+                        <li><Link to="/configs">🪛 Configurações</Link></li>
                     </ul>
+                    
 
                 </nav>
 

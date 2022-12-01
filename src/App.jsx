@@ -4,6 +4,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import { BlogLayout } from './components/BlogLayout'
 import { MainLayout } from './components/MainLayout'
+import { ThemeProvider } from './hooks/useTheme'
 import { Lesson02 } from './lessons/Lesson02'
 import { Lesson03 } from './lessons/Lesson03'
 import { Lesson05 } from "./lessons/Lesson05"
@@ -12,6 +13,7 @@ import { Lesson13 } from "./lessons/Lesson13"
 import { Lesson15 } from "./lessons/Lesson15"
 import { Home } from './pages/Blog/home'
 import { PostDetail } from './pages/Blog/postDetail'
+import { Configurations } from './pages/Configurations'
 import { DHGames } from "./pages/DHGames"
 import { Login } from "./pages/Login"
 
@@ -57,6 +59,11 @@ function App() {
           path:'login',
           element: <Login/>
         },
+        {
+          path:'configs',
+          element: <Configurations/>
+        },
+
       ]
       
     },
@@ -89,7 +96,10 @@ function App() {
     
 
   return (
-      <RouterProvider router={appRouter}/>
+      <ThemeProvider>
+        <RouterProvider router={appRouter}/>
+      </ThemeProvider>
+      
   )
 
 }
