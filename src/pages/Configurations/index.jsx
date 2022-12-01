@@ -3,30 +3,52 @@ import { useState } from 'react'
 import { useBigText } from '../../hooks/useBigText'
 import { useTheme} from '../../hooks/useTheme'
 import { useEffect } from 'react'
+import { useHighContrast } from '../../hooks/useHighContrast'
 
 export function Configurations() {
 
     // Utilização do Hook useTheme
     const { theme, changeTheme } = useTheme()
-    const {bigText, toBigText} = useBigText() 
+    const {toBigText} = useBigText() 
+    const {toHighContrast} = useHighContrast()
 
-    const [checked, setChecked] = useState(false)
+    const [checkedBigText, setCheckedBigText] = useState(false)
+    const [checkedHighContrast, setCheckedHighContrast] = useState(false)
 
-    const handleCheckboxChange = () =>{
+    const handleCheckboxChangeBigText = () =>{
 
-        setChecked(!checked)        
+        setCheckedBigText(!checkedBigText)        
 
     }
 
+    const handleCheckboxChangeHighContrast = () =>{
+
+        setCheckedHighContrast(!checkedHighContrast)        
+
+    }
+
+    
+
     useEffect(()=>{
-        if(checked){
+        if(checkedBigText){
             toBigText('big')
         }else{
             toBigText('')
         }
         
 
-    },[checked])
+    },[checkedBigText])
+
+
+    useEffect(()=>{
+        if(checkedHighContrast){
+            toHighContrast('high-contrast')
+        }else{
+            toHighContrast('')
+        }
+        
+
+    },[checkedHighContrast])
 
    
     return (
@@ -59,8 +81,17 @@ export function Configurations() {
                     <div>
                         <Checkbox
                             label="Letras Grandes"
-                            value={checked}
-                            onChange={handleCheckboxChange}
+                            value={checkedBigText}
+                            onChange={handleCheckboxChangeBigText}
+                        
+                        />
+                    </div>
+
+                    <div>
+                        <Checkbox
+                            label="Alto Contraste"
+                            value={checkedHighContrast}
+                            onChange={handleCheckboxChangeHighContrast}
                         
                         />
                     </div>

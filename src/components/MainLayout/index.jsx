@@ -1,5 +1,6 @@
 import { Link, Outlet } from 'react-router-dom'
 import { useBigText } from '../../hooks/useBigText'
+import { useHighContrast } from '../../hooks/useHighContrast'
 import { useTheme } from '../../hooks/useTheme'
 import './style.scss'
 
@@ -7,11 +8,12 @@ export const MainLayout = () => {
 
     const { theme } = useTheme()
     const { bigText} = useBigText()
-    
+    const { highContrast} = useHighContrast()
+     
 
 
     return (
-        <div className={`main-container ${theme} ${bigText} `}>
+        <div className={`main-container ${theme} ${bigText} ${highContrast} `}>
 
             <header className='main-layout--header'>
 

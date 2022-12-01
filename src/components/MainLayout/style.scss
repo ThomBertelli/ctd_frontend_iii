@@ -8,6 +8,44 @@
 
     }
 
+    &.high-contrast{
+       
+        .main-layout--header{
+            background-color: black !important;
+
+            h1{
+                color: rgb(250, 18, 192) !important;
+            }
+        }
+
+        .main-layout--menu{
+            background-color: rgb(255, 255, 255) !important;
+            a{
+                color: rgb(0, 0, 0) !important;
+                font-weight: bolder !important;
+            }
+            li:hover{
+
+               background-color:  rgb(255, 238, 0) !important;
+
+            }
+            h3{
+                color: black;
+            }
+        }
+        .main-layout--main{
+            color:rgb(255, 238, 0);
+            background-color: rgb(0, 0, 0);
+
+            
+        }
+        
+
+
+    }
+
+   
+
 
     &.dark {
 
@@ -60,10 +98,12 @@
                 background-color: rgb(255, 253, 253);
                 a{
                     color: rgb(0, 0, 0);
+                    
                 }
                 h3{
                     color: black;
                 }
+                
                 li:hover{
     
                     background-color: rgba(109, 104, 104, 0.219);
@@ -73,7 +113,7 @@
     
         }
 
-
+        
 
 
     }
@@ -98,9 +138,10 @@
 
         .main-layout--menu {
             
-            max-width: 180px;
+            min-width: 250px;
+            max-width: 250px;
             width: 100%;
-            padding: 15px 0;
+            padding: 20px 0;
             display: flex;
             justify-content: center;
             height: 100%;
