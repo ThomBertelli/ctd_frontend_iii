@@ -4,6 +4,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import { BlogLayout } from './components/BlogLayout'
 import { MainLayout } from './components/MainLayout'
+import { AcessibilityProvider } from './hooks/useBigText'
 import { ThemeProvider } from './hooks/useTheme'
 import { Lesson02 } from './lessons/Lesson02'
 import { Lesson03 } from './lessons/Lesson03'
@@ -97,7 +98,9 @@ function App() {
 
   return (
       <ThemeProvider>
-        <RouterProvider router={appRouter}/>
+        <AcessibilityProvider>
+          <RouterProvider router={appRouter}/>
+        </AcessibilityProvider>
       </ThemeProvider>
       
   )

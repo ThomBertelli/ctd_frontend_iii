@@ -1,45 +1,43 @@
-
 import { useState } from "react"
 import { createContext, useContext } from "react"
 
 // Ciração do Contexto
-const ThemeContext = createContext()
+const BigTextContext = createContext()
 
 // Criação do Provedor para o Contexto
-export function ThemeProvider(props) {
+export function AcessibilityProvider(props) {
 
-    const themeLocalStorage = localStorage.getItem('theme')
+    const acesssibilityLocalStorage = localStorage.getItem('bigText')
 
     // State que irá controlar qual Tema a aplicação está usando
-    const [theme, setTheme] = useState(themeLocalStorage === null ? 'dark' : themeLocalStorage)
+    const [bigText, setBigText] = useState(acesssibilityLocalStorage === null ? '' : acesssibilityLocalStorage)
 
     // Função responsável por Trocar o Tema
-    function changeTheme(themeRecieved) {
+    function toBigText(infoRecieved) {
 
-        if (themeRecieved !== theme) {
 
-            setTheme(themeRecieved)
-            localStorage.setItem('theme', themeRecieved)
+            setBigText(infoRecieved)
+            localStorage.setItem('bigText', infoRecieved)
 
-        }
+        
 
     }
 
     return (
 
         // Contrução dos Elementos para utilizarmos o Contexto em nossa Aplicação, tudo o que for contido no "value" será exportado e poderá ser utilizado em Componentes que utilizarem o Hook Customizado "useTheme"
-        <ThemeContext.Provider value={{ theme, changeTheme }}>
+        <BigTextContext.Provider value={{ bigText, toBigText }}>
             {props.children}
-        </ThemeContext.Provider>
+        </BigTextContext.Provider>
 
     )
 
 }
 
 // Hook Personalizado que irá ser utilizado quando quisermos utilizar alguma das Funcionalidades contidas em nosso Contexto
-export function useTheme() {
+export function useBigText() {
 
-    const context = useContext(ThemeContext)
+    const context = useContext(BigTextContext)
 
     return context
 

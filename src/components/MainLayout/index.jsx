@@ -1,14 +1,17 @@
 import { Link, Outlet } from 'react-router-dom'
+import { useBigText } from '../../hooks/useBigText'
 import { useTheme } from '../../hooks/useTheme'
 import './style.scss'
 
 export const MainLayout = () => {
 
     const { theme } = useTheme()
+    const { bigText} = useBigText()
+    
 
 
     return (
-        <div className={`main-container ${theme}`}>
+        <div className={`main-container ${theme} ${bigText} `}>
 
             <header className='main-layout--header'>
 
